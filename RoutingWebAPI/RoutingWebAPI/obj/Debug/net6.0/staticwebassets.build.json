@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "jlJgmTZud1QTax8pLE1B3DUwqZQUw7112MykDcffsqw=",
+  "Source": "RoutingWebAPI",
+  "BasePath": "_content/RoutingWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6fa0eb93-f5bf-445c-b009-105156560479": {
+      "ProjectGuid": "6fa0eb93-f5bf-445c-b009-105156560479",
+      "DisplayName": "RoutingWebAPI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
