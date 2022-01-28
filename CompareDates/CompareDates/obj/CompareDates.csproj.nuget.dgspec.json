@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Demos\\dotnet-demos\\RoutingWebAPI\\RoutingWebAPI\\RoutingWebAPI.csproj": {}
+    "D:\\Demos\\dotnet-demos\\CompareDates\\CompareDates\\CompareDates.csproj": {}
   },
   "projects": {
-    "D:\\Demos\\dotnet-demos\\RoutingWebAPI\\RoutingWebAPI\\RoutingWebAPI.csproj": {
+    "D:\\Demos\\dotnet-demos\\CompareDates\\CompareDates\\CompareDates.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Demos\\dotnet-demos\\RoutingWebAPI\\RoutingWebAPI\\RoutingWebAPI.csproj",
-        "projectName": "RoutingWebAPI",
-        "projectPath": "D:\\Demos\\dotnet-demos\\RoutingWebAPI\\RoutingWebAPI\\RoutingWebAPI.csproj",
+        "projectUniqueName": "D:\\Demos\\dotnet-demos\\CompareDates\\CompareDates\\CompareDates.csproj",
+        "projectName": "CompareDates",
+        "projectPath": "D:\\Demos\\dotnet-demos\\CompareDates\\CompareDates\\CompareDates.csproj",
         "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-        "outputPath": "D:\\Demos\\dotnet-demos\\RoutingWebAPI\\RoutingWebAPI\\obj\\",
+        "outputPath": "D:\\Demos\\dotnet-demos\\CompareDates\\CompareDates\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,9 +54,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -1,0 +1,15 @@
+D:\Demos\dotnet-demos\CompareDates\CompareDates\obj\Debug\net6.0\CompareDates.csproj.AssemblyReference.cache
+D:\Demos\dotnet-demos\CompareDates\CompareDates\obj\Debug\net6.0\CompareDates.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demos\dotnet-demos\CompareDates\CompareDates\obj\Debug\net6.0\CompareDates.AssemblyInfoInputs.cache
+D:\Demos\dotnet-demos\CompareDates\CompareDates\obj\Debug\net6.0\CompareDates.AssemblyInfo.cs
+D:\Demos\dotnet-demos\CompareDates\CompareDates\obj\Debug\net6.0\CompareDates.csproj.CoreCompileInputs.cache
+D:\Demos\dotnet-demos\CompareDates\CompareDates\bin\Debug\net6.0\CompareDates.exe
+D:\Demos\dotnet-demos\CompareDates\CompareDates\bin\Debug\net6.0\CompareDates.deps.json
+D:\Demos\dotnet-demos\CompareDates\CompareDates\bin\Debug\net6.0\CompareDates.runtimeconfig.json
+D:\Demos\dotnet-demos\CompareDates\CompareDates\bin\Debug\net6.0\CompareDates.dll
+D:\Demos\dotnet-demos\CompareDates\CompareDates\bin\Debug\net6.0\ref\CompareDates.dll
+D:\Demos\dotnet-demos\CompareDates\CompareDates\bin\Debug\net6.0\CompareDates.pdb
+D:\Demos\dotnet-demos\CompareDates\CompareDates\obj\Debug\net6.0\CompareDates.dll
+D:\Demos\dotnet-demos\CompareDates\CompareDates\obj\Debug\net6.0\ref\CompareDates.dll
+D:\Demos\dotnet-demos\CompareDates\CompareDates\obj\Debug\net6.0\CompareDates.pdb
+D:\Demos\dotnet-demos\CompareDates\CompareDates\obj\Debug\net6.0\CompareDates.genruntimeconfig.cache
