@@ -30,30 +30,32 @@ namespace CompareDates
             date1_details = GetDetails(Date1);
             int[] date2_details = new int[3];
             date2_details = GetDetails(Date2);
+            string Msg1 = $"Date : {date2_details[0]}-{Months[date2_details[1]]}-{date2_details[2]} is earlier than Date :  {date1_details[0]}-{Months[date1_details[1]]}-{date1_details[2]}";
+            string Msg2 = $"Date : {date1_details[0]}-{Months[date1_details[1]]}-{date1_details[2]} is earlier than Date : {date2_details[0]}-{Months[date2_details[1]]}-{date2_details[2]}";
 
-            if(date1_details[2] > date2_details[2])
+            if (date1_details[2] > date2_details[2])
             {
-                return $"Date : {date2_details[0]}-{Months[date2_details[1]]}-{date2_details[2]} is earlier than Date :  {date1_details[0]}-{Months[date1_details[1]]}-{date1_details[2]}";
+                return Msg1;
             }
-            else if(date1_details[2] < date2_details[2])
+            else if (date1_details[2] < date2_details[2])
             {
-                return $"Date : {date1_details[0]}-{Months[date1_details[1]]}-{date1_details[2]} is earlier than Date : {date2_details[0]}-{Months[date2_details[1]]}-{date2_details[2]}";
+                return Msg2;
             }
-            else if(date1_details[1] > date2_details[1])
+            else if (date1_details[1] > date2_details[1])
             {
-                return $"Date : {date2_details[0]}-{Months[date2_details[1]]}-{date2_details[2]} is earlier than Date :  {date1_details[0]}-{Months[date1_details[1]]}-{date1_details[2]}";
+                return Msg1;
             }
-            else if(date1_details[1] < date2_details[1])
+            else if (date1_details[1] < date2_details[1])
             {
-                return $"Date : {date1_details[0]}-{Months[date1_details[1]]}-{date1_details[2]} is earlier than Date : {date2_details[0]}-{Months[date2_details[1]]}-{date2_details[2]}";
+                return Msg2;
             }
-            else if(date1_details[1] > date2_details[1])
+            else if (date1_details[1] > date2_details[1])
             {
-                return $"Date : {date2_details[0]}-{Months[date2_details[1]]}-{date2_details[2]} is earlier than Date :  {date1_details[0]}-{Months[date1_details[1]]}-{date1_details[2]}";
+                return Msg1;
             }
-            else if(date1_details[1] < date2_details[1])
+            else if (date1_details[1] < date2_details[1])
             {
-                return $"Date : {date1_details[0]}-{Months[date1_details[1]]}-{date1_details[2]} is earlier than Date : {date2_details[0]}-{Months[date2_details[1]]}-{date2_details[2]}";
+                return Msg2;
             }
             else
             {
