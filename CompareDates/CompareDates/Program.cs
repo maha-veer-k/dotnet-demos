@@ -88,13 +88,27 @@ namespace CompareDates
             {
                 Console.WriteLine("Enter first date in format like DDMMYYYY : ");
                 Date1 = Console.ReadLine();
-                if (validation.IsValid(Date1)) break; 
+                if (validation.IsValid(Date1))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("You have entered the Date in wrong format plz enter in a correct format :-");
+                }
             }
             while (true)
             {                 
                 Console.WriteLine("Enter Second date in format like DDMMYYYY : ");
                 Date2 = Console.ReadLine();
-                if (validation.IsValid(Date2)) break;
+                if (validation.IsValid(Date2))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("You have entered the Date in wrong format plz enter in a correct format :-");
+                }
             }
             Comparision comparision = new Comparision();
             string msg = comparision.CompareDates(Date1, Date2);
