@@ -5,70 +5,72 @@ namespace CompareDates
 {
     public class Validation
     {
-        public bool IsValid(string str)
+        public bool IsValid(string DateString)
         {
-            if(str.Length != 8) return false;
-            for(int i = 0; i < str.Length; i++)
+            const int MaxNoOfDays = 31;
+            const int MaxNoOfMonths = 12;
+            if(DateString.Length != 8) return false;
+            for(int i = 0; i < DateString.Length; i++)
             {
-                if(!Char.IsNumber(str[i])) return false;
+                if(!Char.IsNumber(DateString[i])) return false;
             }
-            int Day = int.Parse(str.Substring(0, 2));
-            int Month = int.Parse(str.Substring(2, 2));
-            int Year = int.Parse(str.Substring(4));
-            if(Day > 31) return false;
-            if(Month > 12) return false;
+            int Day = int.Parse(DateString.Substring(0, 2));
+            int Month = int.Parse(DateString.Substring(2, 2));
+            int Year = int.Parse(DateString.Substring(4));
+            if(Day > MaxNoOfDays) return false;
+            if(Month > MaxNoOfMonths) return false;
             return true;
         }
     }
 
-    public class Compare
+    public class Comparision
     {
-        string[] Months = new string[12] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+        static string[] Months = new string[12] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
         public string CompareDates(string Date1, string Date2)
         {
-            int[] date1_details = new int[3];
-            date1_details = GetDetails(Date1);
-            int[] date2_details = new int[3];
-            date2_details = GetDetails(Date2);
-            string Msg1 = $"Date : {date2_details[0]}-{Months[date2_details[1]]}-{date2_details[2]} is earlier than Date :  {date1_details[0]}-{Months[date1_details[1]]}-{date1_details[2]}";
-            string Msg2 = $"Date : {date1_details[0]}-{Months[date1_details[1]]}-{date1_details[2]} is earlier than Date : {date2_details[0]}-{Months[date2_details[1]]}-{date2_details[2]}";
+            int[] Date1Details = new int[3]; // array to store details of Date1 like arr[0] = Day, arr[1] = month, arr[2] = year;
+            Date1Details = GetDetails(Date1);
+            int[] Date2Details = new int[3];
+            Date2Details = GetDetails(Date2); // array to store details of Date2 like arr[0] = Day, arr[1] = month, arr[2] = year;
+            string Date2IsEarlierMsg = $"Date : {Date2Details[0]}-{Months[Date2Details[1]-1]}-{Date2Details[2]} is earlier than Date :  {Date1Details[0]}-{Months[Date1Details[1]-1]}-{Date1Details[2]}";
+            string Date1IsEarlierMsg = $"Date : {Date1Details[0]}-{Months[Date1Details[1]-1]}-{Date1Details[2]} is earlier than Date : {Date2Details[0]}-{Months[Date2Details[1]-1]}-{Date2Details[2]}";
 
-            if (date1_details[2] > date2_details[2])
+            if (Date1Details[2] > Date2Details[2])
             {
-                return Msg1;
+                return Date2IsEarlierMsg;
             }
-            else if (date1_details[2] < date2_details[2])
+            else if (Date1Details[2] < Date2Details[2])
             {
-                return Msg2;
+                return Date1IsEarlierMsg;
             }
-            else if (date1_details[1] > date2_details[1])
+            else if (Date1Details[1] > Date2Details[1])
             {
-                return Msg1;
+                return Date2IsEarlierMsg;
             }
-            else if (date1_details[1] < date2_details[1])
+            else if (Date1Details[1] < Date2Details[1])
             {
-                return Msg2;
+                return Date1IsEarlierMsg;
             }
-            else if (date1_details[1] > date2_details[1])
+            else if (Date1Details[1] > Date2Details[1])
             {
-                return Msg1;
+                return Date2IsEarlierMsg;
             }
-            else if (date1_details[1] < date2_details[1])
+            else if (Date1Details[1] < Date2Details[1])
             {
-                return Msg2;
+                return Date1IsEarlierMsg;
             }
             else
             {
-                return $"Date : {date1_details[0]}-{Months[date1_details[1]]}-{date1_details[2]} And Date : {date2_details[0]}-{Months[date2_details[1]]}-{date2_details[2]} Both are same";
+                return $"Date : {Date1Details[0]}-{Months[Date1Details[1]-1]}-{Date1Details[2]} And Date : {Date2Details[0]}-{Months[Date2Details[1]-1]}-{Date2Details[2]} Both are same";
             }
         }
 
-        public int[] GetDetails(string str)
+        private int[] GetDetails(string DateString)
         {
-            int[] details = new int[3];
-            int Day = int.Parse(str.Substring(0, 2));
-            int Month = int.Parse(str.Substring(2, 2));
-            int Year = int.Parse(str.Substring(4));
+            int[] details = new int[3]; // details array is to store the day, month, and year to return deatils of date string  
+            int Day = int.Parse(DateString.Substring(0, 2));
+            int Month = int.Parse(DateString.Substring(2, 2));
+            int Year = int.Parse(DateString.Substring(4));
             details[0] = Day;
             details[1] = Month;
             details[2] = Year;
@@ -81,24 +83,21 @@ namespace CompareDates
         public static void Main(String[] args)
         {
             Validation validation= new Validation();
-            bool flag;
             string Date1, Date2;
             while (true)
             {
-                Console.WriteLine("Enter first date  : ");
+                Console.WriteLine("Enter first date in format like DDMMYYYY : ");
                 Date1 = Console.ReadLine();
-                flag = validation.IsValid(Date1);
-                if (flag) break; 
+                if (validation.IsValid(Date1)) break; 
             }
             while (true)
             {                 
-                Console.WriteLine("Enter Second date : ");
+                Console.WriteLine("Enter Second date in format like DDMMYYYY : ");
                 Date2 = Console.ReadLine();
-                flag = validation.IsValid(Date2);
-                if (flag) break;
+                if (validation.IsValid(Date2)) break;
             }
-            Compare compare = new Compare();
-            string msg = compare.CompareDates(Date1, Date2);
+            Comparision comparision = new Comparision();
+            string msg = comparision.CompareDates(Date1, Date2);
             Console.WriteLine(msg);
         }
     }
