@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3301dae2-11c4-496b-93ef-1de787efa41b": {
+      "ProjectGuid": "3301dae2-11c4-496b-93ef-1de787efa41b",
+      "DisplayName": "ImplementDependencyInjection",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

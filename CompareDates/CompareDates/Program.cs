@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace CompareDates
 {
-    public class Validation
+    public class Validation // Class to check weather the input Date String is in valid format or not
     {
         public bool IsValid(string DateString)
         {
@@ -23,10 +23,10 @@ namespace CompareDates
         }
     }
 
-    public class Comparision
+    public class Comparision // Class to comapare the Dates 
     {
         static string[] Months = new string[12] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
-        public string CompareDates(string Date1, string Date2)
+        public string CompareDates(string Date1, string Date2) //Method in Comparision class to return a massage after comparing them
         {
             int[] Date1Details = new int[3]; // array to store details of Date1 like arr[0] = Day, arr[1] = month, arr[2] = year;
             Date1Details = GetDetails(Date1);
@@ -78,11 +78,11 @@ namespace CompareDates
         }
     } 
 
-    public class program
+    public class Program
     {
         public static void Main(String[] args)
         {
-            Validation validation= new Validation();
+            Validation validation= new Validation(); // create instance of Validation class to check validity of Input Date string
             string Date1, Date2;
             while (true)
             {
@@ -110,8 +110,8 @@ namespace CompareDates
                     Console.WriteLine("You have entered the Date in wrong format plz enter in a correct format :-");
                 }
             }
-            Comparision comparision = new Comparision();
-            string msg = comparision.CompareDates(Date1, Date2);
+            Comparision comparision = new Comparision(); // create instance of comparision class to compare Both the Date input 
+            string msg = comparision.CompareDates(Date1, Date2); // calling the CompareDates method of Comparision class to get the msg to print
             Console.WriteLine(msg);
         }
     }
