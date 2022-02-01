@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using TestWebApi.API.Model;
 using TestWebApi.API.Repository;
@@ -50,7 +51,18 @@ namespace TestWebApi.API.Controllers
                 return BadRequest();
             }
             return Ok("Updated");
-        } 
+        }
+        
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> UpdateBookPatch([FromRoute] int id, [FromBody] JsonPatchDocument bookModel)
+        {
+            var IsUpdated = await _bookRepository.UpdateBookPatch(id, bookModel);
+            if (!IsUpdated)
+            {
+                return BadRequest();
+            }
+            return Ok("Updated");
+        }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBook([FromRoute] int id)

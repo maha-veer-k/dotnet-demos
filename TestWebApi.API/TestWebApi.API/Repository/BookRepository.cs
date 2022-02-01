@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.EntityFrameworkCore;
 using TestWebApi.API.Data;
 using TestWebApi.API.Model;
 
@@ -57,9 +58,21 @@ namespace TestWebApi.API.Repository
             {
                 return false;
             }
-            _context.Books.Update(book);
+           
             await _context.SaveChangesAsync();
             return true;
+        }
+        
+        public async Task<bool> UpdateBookPatch(int bookId, JsonPatchDocument bookModel)
+        {
+            var book = await _context.Books.FindAsync(bookId);
+            if(book != null)
+            {
+                bookModel.ApplyTo(book);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
         }
 
         public async Task<int> DeleteBook(int bookId)
@@ -68,6 +81,6 @@ namespace TestWebApi.API.Repository
             _context.Books.Remove(book);
             await _context.SaveChangesAsync();
             return bookId;
-         }
+        }
     }
 }
