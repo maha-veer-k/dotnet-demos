@@ -69,3 +69,4 @@ D:\Demos\dotnet-demos\TestWebApi.API\TestWebApi.API\bin\Debug\net6.0\Microsoft.A
 D:\Demos\dotnet-demos\TestWebApi.API\TestWebApi.API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Demos\dotnet-demos\TestWebApi.API\TestWebApi.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 D:\Demos\dotnet-demos\TestWebApi.API\TestWebApi.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Demos\dotnet-demos\TestWebApi.API\TestWebApi.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

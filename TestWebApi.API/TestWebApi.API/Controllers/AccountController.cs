@@ -19,14 +19,25 @@ namespace TestWebApi.API.Controllers
         }
 
         [HttpPost("SignUp")]
-        public async Task<IActionResult> UserSignUp([FromBody] SignUpModel signUpModel)
+        public async Task<IActionResult> SignUp([FromBody] SignUpModel signUpModel)
         {
-            var result = await _accountRepository.UserSignUp(signUpModel);
+            var result = await _accountRepository.SignUpAsync(signUpModel);
             if (result.Succeeded)
             {
                 return Ok("New Account Created !!!!!");
             }
             return Unauthorized();
+        }
+
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login([FromBody] SignInModel signInModel)
+        {
+            var result = await _accountRepository.LoginAsync(signInModel);
+            if (string.IsNullOrEmpty(result))
+            {
+                return Unauthorized();
+            }
+            return Ok(result);
         }
     }
 }

@@ -5,6 +5,7 @@ namespace TestWebApi.API.Repository
 {
     public interface IAccountRepository
     {
-        Task<IdentityResult> UserSignUp(SignUpModel signUpModel);
+        Task<IdentityResult> SignUpAsync(SignUpModel signUpModel);
+        Task<string> LoginAsync(SignInModel signInModel);
     }
 }

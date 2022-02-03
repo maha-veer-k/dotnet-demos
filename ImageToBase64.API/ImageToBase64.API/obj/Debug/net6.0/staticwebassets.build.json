@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Ii41zr35KgQgSfSs0NyJbuaxt2+i8/4nOyXxRK9Eqv4=",
+  "Source": "ImageToBase64.API",
+  "BasePath": "_content/ImageToBase64.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
