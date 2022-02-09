@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "801c6417-7bad-4625-9595-1edc7e9d5a83": {
+      "ProjectGuid": "801c6417-7bad-4625-9595-1edc7e9d5a83",
+      "DisplayName": "MysqlUserAPI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

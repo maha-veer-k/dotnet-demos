@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "454c21f5-080b-47e4-ace6-9204a3b6a967": {
+      "ProjectGuid": "454c21f5-080b-47e4-ace6-9204a3b6a967",
+      "DisplayName": "MysqlConnectionApi",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

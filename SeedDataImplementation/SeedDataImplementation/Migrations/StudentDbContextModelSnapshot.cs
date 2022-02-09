@@ -54,6 +54,12 @@ namespace SeedDataImplementation.Migrations
                             Id = 2,
                             Email = "Ujjwal@gmail.com",
                             Name = "Ujjwal"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Email = "tushar@gmail.com",
+                            Name = "Tushar"
                         });
                 });
 #pragma warning restore 612, 618

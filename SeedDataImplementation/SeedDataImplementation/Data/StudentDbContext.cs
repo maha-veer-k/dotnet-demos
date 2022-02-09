@@ -2,6 +2,7 @@
 using SeedDataImplementation.Model;
 
 
+
 namespace SeedDataImplementation.Data
 {
     public class StudentDbContext : DbContext
@@ -28,6 +29,12 @@ namespace SeedDataImplementation.Data
                       Id = 2,
                       Name = "Ujjwal",
                       Email = "Ujjwal@gmail.com"
+                  },
+                  new Student
+                  {
+                      Id = 3,
+                      Name = "Tushar",
+                      Email = "tushar@gmail.com"
                   }
                 );
         }
