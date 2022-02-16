@@ -7,10 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.\
 
-
+string ConnString = builder.Configuration.GetConnectionString("UserDbString");
 //Add service to connect database
-builder.Services.AddDbContext<UserDbContext>();
-            //options.UseMySQL(builder.Configuration.GetConnectionString("UserDbString")));
+builder.Services.AddDbContext<UserDbContext>(options => 
+            options.UseMySql(ConnString, ServerVersion.AutoDetect(ConnString)));
 
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddControllers();

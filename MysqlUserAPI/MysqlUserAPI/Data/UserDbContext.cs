@@ -5,18 +5,18 @@ namespace MysqlUserAPI.Data
 {
     public class UserDbContext : DbContext
     {
+        public UserDbContext(DbContextOptions<UserDbContext> options) : base(options)   
+        {
+                
+        }
         
-        public DbSet<UserModel> Users { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseMySQL("server=localhost; port=3306; database=UserDb; user=root; password=Welcome@123");
-        }
-        public UserDbContext() :base()
-        {
-           
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseMySQL("server=localhost; port=3306; database=UserDb; user=root; password=Welcome@123");
+        //}
 
-        
+
+        public DbSet<UserModel> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

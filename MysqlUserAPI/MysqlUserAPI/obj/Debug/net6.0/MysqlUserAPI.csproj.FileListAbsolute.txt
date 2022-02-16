@@ -50,3 +50,5 @@ D:\Demos\dotnet-demos\MysqlUserAPI\MysqlUserAPI\obj\Debug\net6.0\MysqlUserAPI.dl
 D:\Demos\dotnet-demos\MysqlUserAPI\MysqlUserAPI\obj\Debug\net6.0\ref\MysqlUserAPI.dll
 D:\Demos\dotnet-demos\MysqlUserAPI\MysqlUserAPI\obj\Debug\net6.0\MysqlUserAPI.pdb
 D:\Demos\dotnet-demos\MysqlUserAPI\MysqlUserAPI\obj\Debug\net6.0\MysqlUserAPI.genruntimeconfig.cache
+D:\Demos\dotnet-demos\MysqlUserAPI\MysqlUserAPI\bin\Debug\net6.0\MySqlConnector.dll
+D:\Demos\dotnet-demos\MysqlUserAPI\MysqlUserAPI\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e5bf1220-ab67-42c5-a3ff-fbfd7ca28674": {
+      "ProjectGuid": "e5bf1220-ab67-42c5-a3ff-fbfd7ca28674",
+      "DisplayName": "TestPushNotifications",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

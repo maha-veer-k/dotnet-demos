@@ -32,15 +32,15 @@ namespace TestWebApi.API.Repository
 
         public async Task<BookModel> GetBookById(int bookId)
         {
-            //var book = await _context.Books.Where(x => x.Id == bookId).Select(x => new BookModel()
-            //{
-            //    Id = x.Id,
-            //    Name = x.Name,
-            //}).FirstOrDefaultAsync();
-            //return book;
+            var book = await _context.Books.Where(x => x.Id == bookId).Select(x => new BookModel()
+            {
+                Id = x.Id,
+                Name = x.Name,
+            }).FirstOrDefaultAsync();
+            return book;
 
-            var book = await _context.Books.FindAsync(bookId);
-            return _mapper.Map<BookModel>(book);
+            //var book = await _context.Books.FindAsync(bookId);
+            //return _mapper.Map<BookModel>(book);
 
         }
 
